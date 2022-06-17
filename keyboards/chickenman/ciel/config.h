@@ -92,14 +92,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 //#define FORCE_NKRO
 
-/* Unicode Modes
- *
- * Defines input modes to be used for unicode inputs. UC_WINC is for WinCompose on
- * Windows. Keycodes UC_MOD and UC_RMOD cycle through these modes and UC_M_XX assigns
- * a specific mode.
- */
-#define UNICODE_SELECTED_MODES UC_WINC, UC_MAC, UC_LNX, UC_WIN
-
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
