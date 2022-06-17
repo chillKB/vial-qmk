@@ -13,4 +13,4 @@
  * Windows. Keycodes UC_MOD and UC_RMOD cycle through these modes and UC_M_XX assigns
  * a specific mode.
  */
-#define UNICODE_SELECTED_MODES UC_WINC, UC_MAC, UC_LNX, UC_WIN
+#define UNICODE_SELECTED_MODES UC_WINC, UC_MAC, UC_LNX
