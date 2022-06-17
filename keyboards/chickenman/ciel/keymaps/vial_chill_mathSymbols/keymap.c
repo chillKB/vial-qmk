@@ -39,7 +39,7 @@ enum unicode_names {
     PI,
     PI_UC,
     RHO,
-    SIMGA,
+    SIGMA,
     SIGMA_UC,
     TAU,
     UPSILON,
@@ -53,40 +53,40 @@ enum unicode_names {
 };
 
 const uint32_t PROGMEM unicode_map[] = {
-    [ALPHA] = 0x03B1,
-    [BETA] = 0x03B2,
-    [GAMMA] = 0x03B3,
-    [GAMMA_UC] = 0x0393,
-    [DELTA] = 0x03B4,
-    [DELTA_UC] = 0x0394,
-    [EPSILON] = 0x03B5,
-    [EPSILON_LUNATE] = 0x03F5,
-    [ZETA] = 0x03B6,
-    [ETA] = 0x03B7,
-    [THETA] = 0x03B8,
-    [THETA_UC] = 0x0398,
-    [IOTA] = 0x03B9,
-    [KAPPA] = 0x03BA,
-    [LAMBDA] = 0x03BB,
-    [LAMBDA_UC] = 0x039B,
-    [MU] = 0x03BC,
-    [NU] = 0x03BD,
-    [XI] = 0x03BE,
-    [XI_UC] = 0x039E,
-    [PI] = 0x03C0,
-    [PI_UC] = 0x03A0,
-    [RHO] = 0x03C1,
-    [SIMGA] = 0x03C3,
-    [SIGMA_UC] = 0x03A3,
-    [TAU] = 0x03C4,
-    [UPSILON] = 0x03C5,
-    [PHI] = 0x03C6,
-    [PHI_UC] = 0x03A8,
-    [CHI] = 0x03C7,
-    [PSI] = 0x03C8,
-    [PSI_UC] = 0x03A8,
-    [OMEGA] = 0x03C9,
-    [OMEGA_UC] = 0x03A9,
+    [ALPHA] = 0x03B1,           // α
+    [BETA] = 0x03B2,            // β
+    [GAMMA] = 0x03B3,           // γ
+    [GAMMA_UC] = 0x0393,        // Γ
+    [DELTA] = 0x03B4,           // δ
+    [DELTA_UC] = 0x0394,        // Δ
+    [EPSILON] = 0x03B5,         // ε
+    [EPSILON_LUNATE] = 0x03F5,  // ϵ
+    [ZETA] = 0x03B6,            // ζ
+    [ETA] = 0x03B7,             // η
+    [THETA] = 0x03B8,           // θ
+    [THETA_UC] = 0x0398,        // Θ
+    [IOTA] = 0x03B9,            // ι
+    [KAPPA] = 0x03BA,           // κ
+    [LAMBDA] = 0x03BB,          // λ
+    [LAMBDA_UC] = 0x039B,       // Λ
+    [MU] = 0x03BC,              // μ
+    [NU] = 0x03BD,              // ν
+    [XI] = 0x03BE,              // ξ
+    [XI_UC] = 0x039E,           // Ξ
+    [PI] = 0x03C0,              // π
+    [PI_UC] = 0x03A0,           // Π
+    [RHO] = 0x03C1,             // ρ
+    [SIGMA] = 0x03C3,           // σ
+    [SIGMA_UC] = 0x03A3,        // Σ
+    [TAU] = 0x03C4,             // τ
+    [UPSILON] = 0x03C5,         // υ
+    [PHI] = 0x03C6,             // φ
+    [PHI_UC] = 0x03A6,          // Φ
+    [CHI] = 0x03C7,             // χ
+    [PSI] = 0x03C8,             // ψ
+    [PSI_UC] = 0x03A8,          // Ψ
+    [OMEGA] = 0x03C9,           // ω
+    [OMEGA_UC] = 0x03A9,        // Ω
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -99,9 +99,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [1] = LAYOUT_60_ansi_split_bs_rshift(
         UC_MOD,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
-        _______, X(ALPHA), _______, _______, _______, XP(GAMMA,GAMMA_UC), _______, _______, _______, _______, _______, _______,                   _______,
-        _______,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______, _______,
+        _______, XP(THETA,THETA_UC), XP(OMEGA,OMEGA_UC), XP(EPSILON,EPSILON_LUNATE), X(RHO), X(TAU), XP(PSI,PSI_UC), X(UPSILON), X(IOTA), _______, XP(PI,PI_UC), _______, _______,          _______,
+        _______, X(ALPHA), XP(SIGMA,SIGMA_UC), XP(DELTA,DELTA_UC), XP(PHI,PHI_UC), XP(GAMMA,GAMMA_UC), X(ETA), _______, X(KAPPA), XP(LAMBDA,LAMBDA_UC), _______, _______,                   _______,
+        _______,          X(ZETA), XP(XI,XI_UC), X(CHI), X(NU), X(BETA), _______, X(MU), _______, _______, _______,          _______, _______,
         _______, _______, _______,                            _______,                                     _______, _______, _______, _______
     ),
     [2] = LAYOUT_60_ansi_split_bs_rshift(
