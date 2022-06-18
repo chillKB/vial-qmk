@@ -16,6 +16,7 @@
 #include QMK_KEYBOARD_H
 
 enum unicode_names {
+    // Greek
     ALPHA,
     BETA,
     GAMMA,
@@ -49,7 +50,44 @@ enum unicode_names {
     PSI,
     PSI_UC,
     OMEGA,
-    OMEGA_UC
+    OMEGA_UC,
+
+    // Superscript
+    SS_1,
+    SS_2,
+    SS_3,
+    SS_4,
+    SS_5,
+    SS_6,
+    SS_7,
+    SS_8,
+    SS_9,
+    SS_0,
+
+    // Operators and Other Math Symbols
+    ALMOST_EQUAL,
+    CROSS,
+    DEGREE,
+    DOT,
+    END_OF_PROOF,
+    GREATER_OET,
+    INF,
+    INTEGRAL,
+    LESS_OET, // or equal to
+    NABLA,
+    NOT_EQUAL,
+    NULL_SET,
+    PARTIAL_DIFF,
+    PLUS_MINUS,
+    SQRT,
+    THEREFORE,
+
+    // Misc.
+    TRADEMARK,
+    CENTS,
+    EN_DASH,
+    EM_DASH,
+    RIGHT_DOUBLE_ARROW
 };
 
 const uint32_t PROGMEM unicode_map[] = {
@@ -87,6 +125,37 @@ const uint32_t PROGMEM unicode_map[] = {
     [PSI_UC] = 0x03A8,          // Ψ
     [OMEGA] = 0x03C9,           // ω
     [OMEGA_UC] = 0x03A9,        // Ω
+    [SS_1] = 0x00B9,            // ¹
+    [SS_2] = 0x00B2,            // ²
+    [SS_3] = 0x00B3,            // ³
+    [SS_4] = 0x2074,            // ⁴
+    [SS_5] = 0x2075,            // ⁵
+    [SS_6] = 0x2076,            // ⁶
+    [SS_7] = 0x2077,            // ⁷
+    [SS_8] = 0x2078,            // ⁸
+    [SS_9] = 0x2079,            // ⁹
+    [SS_0] = 0x2070,            // ⁰
+    [ALMOST_EQUAL] = 0x2248,    // ≈
+    [CROSS] = 0x00D7,           // ×
+    [DEGREE] = 0x00B0,          // °
+    [DOT] = 0x2219,             // ∙
+    [END_OF_PROOF] = 0x220E,    // ∎
+    [GREATER_OET] = 0x2265,     // ≥
+    [INF] = 0x221E,             // ∞
+    [INTEGRAL] = 0x222B,        // ∫
+    [LESS_OET] = 0x2264,        // ≤
+    [NABLA] = 0x2207,           // ∇
+    [NOT_EQUAL] = 0x2260,       // ≠
+    [NULL_SET] = 0x2205,        // ∅
+    [PARTIAL_DIFF] = 0x2202,    // ∂
+    [PLUS_MINUS] = 0x00B1,      // ±
+    [SQRT] = 0x221A,            // √
+    [THEREFORE] = 0x2234,       // ∴
+    [TRADEMARK] = 0x2122,       // ™
+    [CENTS] = 0x00A2,           // ¢
+    [EN_DASH] = 0x2013,         // –
+    [EM_DASH] = 0x2014,         // —
+    [RIGHT_DOUBLE_ARROW] = 0x21D2 // ⇒
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -98,10 +167,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, KC_LGUI, KC_LALT,                            KC_SPC,                                      KC_APP, KC_RALT, MO(1),    KC_RCTL
     ),
     [1] = LAYOUT_60_ansi_split_bs_rshift(
-        UC_MOD,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, XP(THETA,THETA_UC), XP(OMEGA,OMEGA_UC), XP(EPSILON,EPSILON_LUNATE), X(RHO), X(TAU), XP(PSI,PSI_UC), X(UPSILON), X(IOTA), _______, XP(PI,PI_UC), _______, _______,          _______,
+        UC_MOD,  XP(SS_1,SQRT), XP(SS_2,TRADEMARK), XP(SS_3,RIGHT_DOUBLE_ARROW), XP(SS_4,CENTS), XP(SS_5,INF), XP(SS_6,DEGREE), XP(SS_7,THEREFORE), XP(SS_8,CROSS), XP(SS_9,PARTIAL_DIFF), XP(SS_0,NABLA), XP(EN_DASH,EM_DASH), XP(NOT_EQUAL,PLUS_MINUS), XP(INTEGRAL,END_OF_PROOF), XP(DOT,ALMOST_EQUAL),
+        _______, XP(THETA,THETA_UC), XP(OMEGA,OMEGA_UC), XP(EPSILON,EPSILON_LUNATE), X(RHO), X(TAU), XP(PSI,PSI_UC), X(UPSILON), X(IOTA), X(NULL_SET), XP(PI,PI_UC), _______, _______,          _______,
         _______, X(ALPHA), XP(SIGMA,SIGMA_UC), XP(DELTA,DELTA_UC), XP(PHI,PHI_UC), XP(GAMMA,GAMMA_UC), X(ETA), _______, X(KAPPA), XP(LAMBDA,LAMBDA_UC), _______, _______,                   _______,
-        _______,          X(ZETA), XP(XI,XI_UC), X(CHI), X(NU), X(BETA), _______, X(MU), _______, _______, _______,          _______, _______,
+        _______,          X(ZETA), XP(XI,XI_UC), X(CHI), X(NU), X(BETA), _______, X(MU), X(LESS_OET), X(GREATER_OET), _______,          _______, _______,
         _______, _______, _______,                            _______,                                     _______, _______, _______, _______
     ),
     [2] = LAYOUT_60_ansi_split_bs_rshift(
