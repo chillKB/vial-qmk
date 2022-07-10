@@ -50,14 +50,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 
-/* Polling rate sets how often in ms the keyboard checks each key
- *  125Hz = 8ms
- *  250Hz = 4ms
- *  500Hz = 2ms
- * 1000Hz = 1ms
- */
-#define USB_POLLING_INTERVAL_MS 4
-
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
 
