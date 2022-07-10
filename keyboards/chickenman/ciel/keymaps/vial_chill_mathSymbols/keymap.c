@@ -167,7 +167,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, KC_LGUI, KC_LALT,                            KC_SPC,                                      KC_APP, KC_RALT, MO(1),    KC_RCTL
     ),
     [1] = LAYOUT_60_ansi_split_bs_rshift(
-        UC_MOD,  XP(SS_1,SQRT), XP(SS_2,TRADEMARK), XP(SS_3,RIGHT_DOUBLE_ARROW), XP(SS_4,CENTS), XP(SS_5,INF), XP(SS_6,DEGREE), XP(SS_7,THEREFORE), XP(SS_8,CROSS), XP(SS_9,PARTIAL_DIFF), XP(SS_0,NABLA), XP(EN_DASH,EM_DASH), XP(NOT_EQUAL,PLUS_MINUS), XP(INTEGRAL,END_OF_PROOF), XP(DOT,ALMOST_EQUAL),
+        UC_MOD,  XP(SS_1,SQRT), XP(SS_2,TRADEMARK), XP(SS_3,RIGHT_DOUBLE_ARROW), XP(SS_4,CENTS), XP(SS_5,INF), XP(SS_6,DEGREE), XP(SS_7,THEREFORE), XP(SS_8,CROSS), XP(SS_9,PARTIAL_DIFF), XP(SS_0,NABLA), XP(EM_DASH,EN_DASH), XP(NOT_EQUAL,PLUS_MINUS), XP(INTEGRAL,END_OF_PROOF), XP(DOT,ALMOST_EQUAL),
         _______, XP(THETA,THETA_UC), XP(OMEGA,OMEGA_UC), XP(EPSILON,EPSILON_LUNATE), X(RHO), X(TAU), XP(PSI,PSI_UC), X(UPSILON), X(IOTA), X(NULL_SET), XP(PI,PI_UC), _______, _______,          _______,
         _______, X(ALPHA), XP(SIGMA,SIGMA_UC), XP(DELTA,DELTA_UC), XP(PHI,PHI_UC), XP(GAMMA,GAMMA_UC), X(ETA), _______, X(KAPPA), XP(LAMBDA,LAMBDA_UC), _______, _______,                   _______,
         _______,          X(ZETA), XP(XI,XI_UC), X(CHI), X(NU), X(BETA), _______, X(MU), X(LESS_OET), X(GREATER_OET), _______,          _______, _______,
